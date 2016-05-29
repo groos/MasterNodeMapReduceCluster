@@ -23,7 +23,7 @@ object MapReduceClient {
   }
 }
 
-class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple]) extends Actor {
+class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple], reduceFunction:() => List[MyTuple]) extends Actor {
   val cluster = Cluster(context.system)
   
   val servicePathElements = servicePath match {
@@ -45,19 +45,19 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
     tickTask.cancel()
   }
     
-  self ! MapJob(key, value, mapFunction)
+  self ! MapJob(key, value, mapFunction, reduceFunction)
 
   def receive = {
     case job: MapJob if nodes.nonEmpty =>
-      println("got a mapjob")
-      
-      var map = List[MyTuple]()
-      println(job.value)
-      map = job.processFunction(job.key, job.value)
-      println(map)
-      for (item <- map){
-          println(item.key + " : " + item.value)
-      }
+//      println("got a mapjob")
+//      
+//      var map = List[MyTuple]()
+//      println(job.value)
+//      map = job.mapFunction(job.key, job.value)
+//      println(map)
+//      for (item <- map){
+//          println(item.key + " : " + item.value)
+//      }
       
       val randomNode = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
       
@@ -66,15 +66,15 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
       reduceService ! job
     
     case job: MapJob if nodes.isEmpty =>
-      self ! job
+      self ! job // resend the job until we have a node to use.
     case result: MapReduceResult =>
         println(result)
       
-    case "tick" if nodes.nonEmpty =>
-      // just pick any one
-      val address = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
-      val service = context.actorSelection(RootActorPath(address) / servicePathElements)
-      service ! StatsJob("this is the text that will be analyzed")
+//    case "tick" if nodes.nonEmpty =>
+//      // just pick any one
+//      val address = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
+//      val service = context.actorSelection(RootActorPath(address) / servicePathElements)
+//      service ! StatsJob("this is the text that will be analyzed")
       
     case result: StatsResult =>
       println(result)

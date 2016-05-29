@@ -3,7 +3,7 @@ package MapReduce
 import scala.collection.mutable.HashMap
 
 //#messages
-final case class MapJob(key: String, value: String, processFunction: (String, String) => List[MyTuple])
+final case class MapJob(key: String, value: String, mapFunction: (String, String) => List[MyTuple], reduceFunction: () => List[MyTuple])
 
 final case class MapReduceResult(placeholder:String)
 

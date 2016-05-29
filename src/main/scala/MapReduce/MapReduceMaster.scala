@@ -78,8 +78,8 @@ object MapReduceMasterClient {
       result
     }
     
-    def reduceFunction(): String = {
-    	return "Returned from Reduce Function"
+    val reduceFunction = () => {
+    	MyTuple("Returned from Reduce Function", 1)
     }
       
     var filenames = List("text1.txt")
@@ -88,7 +88,7 @@ object MapReduceMasterClient {
     for (file <- filenames){
       fileContents = Source.fromFile(file).getLines.mkString
     
-      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction), "client")
+      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction, reduceFunction), "client")
       
    }
       

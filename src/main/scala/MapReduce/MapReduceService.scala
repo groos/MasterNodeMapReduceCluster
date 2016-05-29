@@ -17,7 +17,18 @@ class MapReduceService extends Actor {
     name = "workerRouter")
 
   def receive = {
-    case job: MapJob => println("service got a mapjob")
+    case job: MapJob => 
+      println("service got a mapjob")
+      val aggregator = context.actorOf(Props(classOf[MapReduceAggregator]))
+      workerRouter ! ConsistentHashableEnvelope("testing", "testing")
+      
+      workerRouter.tell(
+        ConsistentHashableEnvelope("testing", "testing"),
+          aggregator
+      )
+    
+    case result: MyTuple => println("hi")
+      
     case StatsJob(text) if text != "" =>
       val words = text.split(" ")
       val replyTo = sender() // important to not close over sender()
@@ -29,6 +40,15 @@ class MapReduceService extends Actor {
           ConsistentHashableEnvelope(word, word), aggregator)
       }
   }
+}
+
+class MapReduceAggregator extends Actor {
+    
+    
+    def receive = {
+        case "worker response" => println("response received at aggregator")
+        case "testMessage" => println("hi from aggregator")
+    }
 }
 
 class StatsAggregator(expectedResults: Int, replyTo: ActorRef) extends Actor {
