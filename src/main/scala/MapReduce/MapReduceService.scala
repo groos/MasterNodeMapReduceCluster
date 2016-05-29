@@ -17,6 +17,7 @@ class MapReduceService extends Actor {
     name = "workerRouter")
 
   def receive = {
+    case job: MapJob => println("service got a mapjob")
     case StatsJob(text) if text != "" =>
       val words = text.split(" ")
       val replyTo = sender() // important to not close over sender()

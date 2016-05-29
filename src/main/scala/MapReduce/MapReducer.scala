@@ -13,6 +13,7 @@ import akka.actor.RootActorPath
 import akka.cluster.Cluster
 import akka.cluster.ClusterEvent._
 import akka.cluster.MemberStatus
+import scala.collection.mutable.HashMap
 
 
 object MapReduceClient {
@@ -22,22 +23,14 @@ object MapReduceClient {
   }
 }
 
-class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:String) extends Actor {
+class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple]) extends Actor {
   val cluster = Cluster(context.system)
-  
-  println()
-  //println(map)
-  println(mapFunction)
-  println()
-    
   
   val servicePathElements = servicePath match {
     case RelativeActorPath(elements) => elements
     case _ => throw new IllegalArgumentException(
       "servicePath [%s] is not a valid relative actor path" format servicePath)
   }
-
-  self ! MapJob(key, value, mapFunction)
     
   import context.dispatcher
   val tickTask = context.system.scheduler.schedule(2.seconds, 2.seconds, self, "tick")
@@ -51,20 +44,44 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
     cluster.unsubscribe(self)
     tickTask.cancel()
   }
+    
+  self ! MapJob(key, value, mapFunction)
 
   def receive = {
-    case job: MapJob =>
+    case job: MapJob if nodes.nonEmpty =>
       println("got a mapjob")
-      println(job.processFunction)
+      
+      var map = List[MyTuple]()
+      println(job.value)
+      map = job.processFunction(job.key, job.value)
+      println(map)
+      for (item <- map){
+          println(item.key + " : " + item.value)
+      }
+      
+      val randomNode = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
+      
+      val reduceService = context.actorSelection(RootActorPath(randomNode) / servicePathElements)
+      
+      reduceService ! job
+    
+    case job: MapJob if nodes.isEmpty =>
+      self ! job
+    case result: MapReduceResult =>
+        println(result)
+      
     case "tick" if nodes.nonEmpty =>
       // just pick any one
       val address = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
       val service = context.actorSelection(RootActorPath(address) / servicePathElements)
       service ! StatsJob("this is the text that will be analyzed")
+      
     case result: StatsResult =>
       println(result)
+      
     case failed: JobFailed =>
       println(failed)
+      
     case state: CurrentClusterState =>
       nodes = state.members.collect {
         case m if m.hasRole("compute") && m.status == MemberStatus.Up => m.address

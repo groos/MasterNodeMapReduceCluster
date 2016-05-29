@@ -9,6 +9,7 @@ import akka.cluster.singleton.ClusterSingletonManagerSettings
 import akka.cluster.singleton.ClusterSingletonProxy
 import akka.cluster.singleton.ClusterSingletonProxySettings
 import scala.io.Source
+import scala.collection.mutable.HashMap
 
 object MapReduceMaster {
   def main(args: Array[String]): Unit = {
@@ -59,42 +60,35 @@ computing the number of incoming hyperlinks for each html file in a set of html 
 
 object MapReduceMasterClient {
   def main(args: Array[String]): Unit = {
-    // note that client is not a compute node, role not defined
+      
     val system = ActorSystem("ClusterSystem")
-    
-    def mapFunction(key: String, content: String): String = {
-    
+      
+      
+    val mapFunction = (key:String, content:String) => {
       val STOP_WORDS_LIST = List("a", "am", "an", "and", "are", "as", "at", "be", "do", "go", "if", "in", "is", "it", "of", "on", "the", "to")
       
-      var result = List[MyList]()
+      var result = List[MyTuple]()
         
       for (word <- content.toLowerCase.split("[\\p{Punct}\\s]+")) 
         if ((!STOP_WORDS_LIST.contains(word))) {
             
-            result = MyList(word, 1) :: result
+            result = MyTuple(word, 1)::result
         }
-        
-      return result.mkString
+    
+      result
     }
     
     def reduceFunction(): String = {
     	return "Returned from Reduce Function"
     }
       
-    val x = "hello!"
-
     var filenames = List("text1.txt")
-      
-    //val content = scala.collection.mutable.Map[String,String]()
       
     var fileContents = ""
     for (file <- filenames){
       fileContents = Source.fromFile(file).getLines.mkString
-        
-      //content.put(file, fileContents)
-      
-      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction(file, fileContents)), "client")
     
+      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction), "client")
       
    }
       
