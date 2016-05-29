@@ -23,7 +23,7 @@ object MapReduceClient {
   }
 }
 
-class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple], reduceFunction:() => List[MyTuple]) extends Actor {
+class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple], reduceFunction:(List[MyTuple]) => String) extends Actor {
   val cluster = Cluster(context.system)
   
   val servicePathElements = servicePath match {
@@ -68,7 +68,8 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
     case job: MapJob if nodes.isEmpty =>
       self ! job // resend the job until we have a node to use.
     case result: MapReduceResult =>
-        println(result)
+        println("omg go map reduce results...")
+        println(result.results)
       
 //    case "tick" if nodes.nonEmpty =>
 //      // just pick any one

@@ -78,8 +78,20 @@ object MapReduceMasterClient {
       result
     }
     
-    val reduceFunction = () => {
-    	MyTuple("Returned from Reduce Function", 1)
+    val reduceFunction = (rawResults:List[MyTuple]) => {
+        //var results:HashMap[String,Int] = HashMap()
+        var results = HashMap[String,Int]()
+        var stringResult = ""
+        
+        for (item <- rawResults){
+            if (results.contains(item.key)){
+                println(item.key)
+                results += (item.key -> (results(item.key) + 1))
+            } else {
+                results += (item.key -> 1)
+            }
+        }
+        results.mkString
     }
       
     var filenames = List("text1.txt")

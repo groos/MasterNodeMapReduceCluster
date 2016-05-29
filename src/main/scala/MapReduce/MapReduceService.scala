@@ -7,6 +7,7 @@ import akka.actor.Props
 import akka.actor.ReceiveTimeout
 import akka.routing.ConsistentHashingRouter.ConsistentHashableEnvelope
 import akka.routing.FromConfig
+import scala.collection.mutable.HashMap
 
 //#service
 class MapReduceService extends Actor {
@@ -19,13 +20,22 @@ class MapReduceService extends Actor {
   def receive = {
     case job: MapJob => 
       println("service got a mapjob")
-      val aggregator = context.actorOf(Props(classOf[MapReduceAggregator]))
-      workerRouter ! ConsistentHashableEnvelope("testing", "testing")
+      val senderActor = sender()
       
+      val aggregator = context.actorOf(Props(classOf[MapReduceAggregator], job.value.split(" ").length, senderActor, job.reduceFunction))
+      
+      
+//      for (item <- job.value.split(" ")){
+//        workerRouter.tell(
+//        ConsistentHashableEnvelope(job, item),
+//          aggregator
+//        )
+//      }
       workerRouter.tell(
-        ConsistentHashableEnvelope("testing", "testing"),
+        ConsistentHashableEnvelope(job, job.value),
           aggregator
-      )
+        )
+
     
     case result: MyTuple => println("hi")
       
@@ -42,10 +52,15 @@ class MapReduceService extends Actor {
   }
 }
 
-class MapReduceAggregator extends Actor {
-    
+class MapReduceAggregator(contentSize: Int, sender: ActorRef, reduceFunction:(List[MyTuple]) => String) extends Actor {
+    var results:HashMap[String,Int] = HashMap()
     
     def receive = {
+        case results: List[MyTuple] =>
+            // run the reduce function and send results back to sender
+            println("got results. processing and sending back home.")
+            sender ! MapReduceResult(reduceFunction(results))
+        
         case "worker response" => println("response received at aggregator")
         case "testMessage" => println("hi from aggregator")
     }
