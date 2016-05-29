@@ -16,6 +16,7 @@ class MapReduceWorker extends Actor {
       }
 
       sender() ! length
+      
   }
 }
 //#worker

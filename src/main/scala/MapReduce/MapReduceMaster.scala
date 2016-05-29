@@ -50,7 +50,19 @@ object MapReduceMasterClient {
   def main(args: Array[String]): Unit = {
     // note that client is not a compute node, role not defined
     val system = ActorSystem("ClusterSystem")
-    system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy"), "client")
+    
+    def mapFunction(x: String): String = {
+    	return x + " Returned From Map Function"
+    }
+    
+    def reduceFunction(): String = {
+    	return "Returned from Reduce Function"
+    }
+      
+    val x = "hello!"
+    
+    // Send map, reduce, and input data to the Map Reducer. There it can be distributed via router.
+    system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", mapFunction(x), reduceFunction, "put otherrr parameters here"), "client")
   }
 }
 

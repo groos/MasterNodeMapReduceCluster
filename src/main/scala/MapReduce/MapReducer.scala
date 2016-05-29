@@ -14,42 +14,24 @@ import akka.cluster.Cluster
 import akka.cluster.ClusterEvent._
 import akka.cluster.MemberStatus
 
-object MapReducer {
-  def main(args: Array[String]): Unit = {
-    if (args.isEmpty) {
-      startup(Seq("2551", "2552", "0"))
-      MapReduceClient.main(Array.empty)
-    } else {
-      startup(args)
-    }
-  }
-
-  def startup(ports: Seq[String]): Unit = {
-    ports foreach { port =>
-      // Override the configuration of the port when specified as program argument
-      val config =
-        ConfigFactory.parseString(s"akka.remote.netty.tcp.port=" + port).withFallback(
-          ConfigFactory.parseString("akka.cluster.roles = [compute]")).
-          withFallback(ConfigFactory.load("stats1"))
-
-      val system = ActorSystem("ClusterSystem", config)
-
-      system.actorOf(Props[MapReduceWorker], name = "Worker1")
-      system.actorOf(Props[MapReduceService], name = "Service1")
-    }
-  }
-}
 
 object MapReduceClient {
   def main(args: Array[String]): Unit = {
-    // note that client is not a compute node, role not defined
     val system = ActorSystem("ClusterSystem")
+    println("hello")
     system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceService"), "client")
   }
 }
 
-class MapReduceClient(servicePath: String) extends Actor {
+class MapReduceClient(servicePath: String, map:String, reduce: String, inputData: String) extends Actor {
   val cluster = Cluster(context.system)
+  
+  println()
+  println(inputData)
+  println(map)
+  println(reduce)
+  println()
+  
   val servicePathElements = servicePath match {
     case RelativeActorPath(elements) => elements
     case _ => throw new IllegalArgumentException(
