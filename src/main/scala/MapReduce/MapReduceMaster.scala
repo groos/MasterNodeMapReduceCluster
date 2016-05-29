@@ -79,19 +79,23 @@ object MapReduceMasterClient {
     }
     
     val reduceFunction = (rawResults:List[MyTuple]) => {
-        //var results:HashMap[String,Int] = HashMap()
         var results = HashMap[String,Int]()
-        var stringResult = ""
+        var stringResult = "\n\n------Map Reduce Results------\n\n"
         
         for (item <- rawResults){
             if (results.contains(item.key)){
-                println(item.key)
                 results += (item.key -> (results(item.key) + 1))
             } else {
                 results += (item.key -> 1)
             }
         }
-        results.mkString
+        
+        for (item <- results){
+            stringResult += item + "\n"
+        }
+        
+        stringResult += "\n------------------------------\n\n"
+        stringResult
     }
       
     var filenames = List("text1.txt")
@@ -103,7 +107,6 @@ object MapReduceMasterClient {
       system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction, reduceFunction), "client")
       
    }
-      
   }
 }
 

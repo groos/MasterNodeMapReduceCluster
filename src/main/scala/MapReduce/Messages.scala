@@ -8,7 +8,5 @@ final case class MapJob(key: String, value: String, mapFunction: (String, String
 final case class MapReduceResult(results:String)
 
 final case class MyTuple(key: String, value: Int)
-final case class StatsJob(text: String)
-final case class StatsResult(meanWordLength: Double)
 final case class JobFailed(reason: String)
 //#messages

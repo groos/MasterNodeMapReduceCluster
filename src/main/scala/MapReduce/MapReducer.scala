@@ -49,16 +49,6 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
 
   def receive = {
     case job: MapJob if nodes.nonEmpty =>
-//      println("got a mapjob")
-//      
-//      var map = List[MyTuple]()
-//      println(job.value)
-//      map = job.mapFunction(job.key, job.value)
-//      println(map)
-//      for (item <- map){
-//          println(item.key + " : " + item.value)
-//      }
-      
       val randomNode = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
       
       val reduceService = context.actorSelection(RootActorPath(randomNode) / servicePathElements)
@@ -67,18 +57,9 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
     
     case job: MapJob if nodes.isEmpty =>
       self ! job // resend the job until we have a node to use.
+      
     case result: MapReduceResult =>
-        println("omg go map reduce results...")
         println(result.results)
-      
-//    case "tick" if nodes.nonEmpty =>
-//      // just pick any one
-//      val address = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))
-//      val service = context.actorSelection(RootActorPath(address) / servicePathElements)
-//      service ! StatsJob("this is the text that will be analyzed")
-      
-    case result: StatsResult =>
-      println(result)
       
     case failed: JobFailed =>
       println(failed)
@@ -92,5 +73,4 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
     case UnreachableMember(m)                       => nodes -= m.address
     case ReachableMember(m) if m.hasRole("compute") => nodes += m.address
   }
-
 }
