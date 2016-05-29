@@ -18,25 +18,27 @@ import akka.cluster.MemberStatus
 object MapReduceClient {
   def main(args: Array[String]): Unit = {
     val system = ActorSystem("ClusterSystem")
-    println("hello")
     system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceService"), "client")
   }
 }
 
-class MapReduceClient(servicePath: String, map:String, reduce: String, inputData: String) extends Actor {
+class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:String) extends Actor {
   val cluster = Cluster(context.system)
   
   println()
-  println(inputData)
-  println(map)
-  println(reduce)
+  //println(map)
+  println(mapFunction)
   println()
+    
   
   val servicePathElements = servicePath match {
     case RelativeActorPath(elements) => elements
     case _ => throw new IllegalArgumentException(
       "servicePath [%s] is not a valid relative actor path" format servicePath)
   }
+
+  self ! MapJob(key, value, mapFunction)
+    
   import context.dispatcher
   val tickTask = context.system.scheduler.schedule(2.seconds, 2.seconds, self, "tick")
 
@@ -51,6 +53,9 @@ class MapReduceClient(servicePath: String, map:String, reduce: String, inputData
   }
 
   def receive = {
+    case job: MapJob =>
+      println("got a mapjob")
+      println(job.processFunction)
     case "tick" if nodes.nonEmpty =>
       // just pick any one
       val address = nodes.toIndexedSeq(ThreadLocalRandom.current.nextInt(nodes.size))

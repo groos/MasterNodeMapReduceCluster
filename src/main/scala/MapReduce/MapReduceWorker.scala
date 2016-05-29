@@ -3,7 +3,7 @@ package MapReduce
 import akka.actor.Actor
 
 //#worker
-class MapReduceWorker extends Actor {
+class MapReduceWorker() extends Actor {
   var cache = Map.empty[String, Int]
   def receive = {
     case word: String =>

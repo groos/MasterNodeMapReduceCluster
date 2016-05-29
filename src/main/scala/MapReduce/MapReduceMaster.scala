@@ -8,6 +8,7 @@ import akka.cluster.singleton.ClusterSingletonManager
 import akka.cluster.singleton.ClusterSingletonManagerSettings
 import akka.cluster.singleton.ClusterSingletonProxy
 import akka.cluster.singleton.ClusterSingletonProxySettings
+import scala.io.Source
 
 object MapReduceMaster {
   def main(args: Array[String]): Unit = {
@@ -46,13 +47,34 @@ object MapReduceMaster {
   }
 }
 
+/*
+
+counting the number of occurrences of words in a set of text files (the example used in Lecture 3)
+
+computing the reverse index for proper names in a set of text files (what you did in Homework 3)
+
+computing the number of incoming hyperlinks for each html file in a set of html files (the first step in computing its PageRank)
+
+*/
+
 object MapReduceMasterClient {
   def main(args: Array[String]): Unit = {
     // note that client is not a compute node, role not defined
     val system = ActorSystem("ClusterSystem")
     
-    def mapFunction(x: String): String = {
-    	return x + " Returned From Map Function"
+    def mapFunction(key: String, content: String): String = {
+    
+      val STOP_WORDS_LIST = List("a", "am", "an", "and", "are", "as", "at", "be", "do", "go", "if", "in", "is", "it", "of", "on", "the", "to")
+      
+      var result = List[MyList]()
+        
+      for (word <- content.toLowerCase.split("[\\p{Punct}\\s]+")) 
+        if ((!STOP_WORDS_LIST.contains(word))) {
+            
+            result = MyList(word, 1) :: result
+        }
+        
+      return result.mkString
     }
     
     def reduceFunction(): String = {
@@ -60,9 +82,22 @@ object MapReduceMasterClient {
     }
       
     val x = "hello!"
+
+    var filenames = List("text1.txt")
+      
+    //val content = scala.collection.mutable.Map[String,String]()
+      
+    var fileContents = ""
+    for (file <- filenames){
+      fileContents = Source.fromFile(file).getLines.mkString
+        
+      //content.put(file, fileContents)
+      
+      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction(file, fileContents)), "client")
     
-    // Send map, reduce, and input data to the Map Reducer. There it can be distributed via router.
-    system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", mapFunction(x), reduceFunction, "put otherrr parameters here"), "client")
+      
+   }
+      
   }
 }
 
