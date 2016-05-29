@@ -31,9 +31,6 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
     case _ => throw new IllegalArgumentException(
       "servicePath [%s] is not a valid relative actor path" format servicePath)
   }
-    
-  import context.dispatcher
-  val tickTask = context.system.scheduler.schedule(2.seconds, 2.seconds, self, "tick")
 
   var nodes = Set.empty[Address]
 
@@ -42,7 +39,6 @@ class MapReduceClient(servicePath: String, key:String, value:String, mapFunction
   }
   override def postStop(): Unit = {
     cluster.unsubscribe(self)
-    tickTask.cancel()
   }
     
   self ! MapJob(key, value, mapFunction, reduceFunction)
