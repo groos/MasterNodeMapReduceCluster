@@ -8,6 +8,9 @@ object FunctionFactory {
     // 1 = proper names
     // 2 = url count
     var mode = 0
+    
+    // Unsafe if no init with main. 
+    // Forgot how to properly initalize these types.
     var map = mapFunctionWc
     var reduce = reduceFunctionWc
     
