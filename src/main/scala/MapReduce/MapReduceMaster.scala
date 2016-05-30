@@ -99,12 +99,18 @@ object MapReduceMasterClient {
     }
       
     var filenames = List("text1.txt")
+    
+    // initialize factory
+    FunctionFactory.main(Array.empty)
+      
+    var map = FunctionFactory.getMap()
+    var reduce = FunctionFactory.getReduce()
       
     var fileContents = ""
     for (file <- filenames){
       fileContents = Source.fromFile(file).getLines.mkString
     
-      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, mapFunction, reduceFunction), "client")
+      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, map, reduce), "client")
       
    }
   }
