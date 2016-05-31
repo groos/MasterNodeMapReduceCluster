@@ -9,7 +9,7 @@ class MapReduceWorker() extends Actor {
       //println("worker got a mapjob")
       var map = List[MyTuple]()
       map = job.mapFunction(job.key, job.value)
-      sender() ! map
+      sender() ! MapReduceRawResult(job.key, map)
   }
 }
 //#worker

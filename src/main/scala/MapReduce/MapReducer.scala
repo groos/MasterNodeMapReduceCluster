@@ -23,7 +23,7 @@ object MapReduceClient {
   }
 }
 
-class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple], reduceFunction:(List[MyTuple]) => String) extends Actor {
+class MapReduceClient(servicePath: String, key:String, value:String, mapFunction:(String,String) => List[MyTuple], reduceFunction:(String, List[MyTuple]) => String) extends Actor {
   val cluster = Cluster(context.system)
   
   val servicePathElements = servicePath match {

@@ -31,13 +31,13 @@ class MapReduceService extends Actor {
   }
 }
 
-class MapReduceAggregator(contentSize: Int, sender: ActorRef, reduceFunction:(List[MyTuple]) => String) extends Actor {
+class MapReduceAggregator(contentSize: Int, sender: ActorRef, reduceFunction:(String, List[MyTuple]) => String) extends Actor {
     
     def receive = {
-        case results: List[MyTuple] =>
+        case results: MapReduceRawResult =>
             // run the reduce function and send results back to sender
             // println("got results. processing and sending back home.")
-            sender ! MapReduceResult(reduceFunction(results))
+            sender ! MapReduceResult(reduceFunction(results.key, results.rawData))
     }
 }
 
