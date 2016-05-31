@@ -15,9 +15,11 @@ object MapReduceMaster {
   def main(args: Array[String]): Unit = {
     if (args.isEmpty) {
       startup(Seq("2551", "2552", "0"))
-      MapReduceMasterClient.main(Array.empty)
+      var a = Array("0")
+      MapReduceMasterClient.main(a)
     } else {
-      startup(args)
+      startup(Seq("2551", "2552", "0"))
+      MapReduceMasterClient.main(args)
     }
   }
 
@@ -62,56 +64,25 @@ object MapReduceMasterClient {
   def main(args: Array[String]): Unit = {
       
     val system = ActorSystem("ClusterSystem")
-      
-      
-    val mapFunction = (key:String, content:String) => {
-      val STOP_WORDS_LIST = List("a", "am", "an", "and", "are", "as", "at", "be", "do", "go", "if", "in", "is", "it", "of", "on", "the", "to")
-      
-      var result = List[MyTuple]()
-        
-      for (word <- content.toLowerCase.split("[\\p{Punct}\\s]+")) 
-        if ((!STOP_WORDS_LIST.contains(word))) {
-            
-            result = MyTuple(word, 1)::result
-        }
-    
-      result
-    }
-    
-    val reduceFunction = (rawResults:List[MyTuple]) => {
-        var results = HashMap[String,Int]()
-        var stringResult = "\n\n------Map Reduce Results------\n\n"
-        
-        for (item <- rawResults){
-            if (results.contains(item.key)){
-                results += (item.key -> (results(item.key) + 1))
-            } else {
-                results += (item.key -> 1)
-            }
-        }
-        
-        for (item <- results){
-            stringResult += item + "\n"
-        }
-        
-        stringResult += "\n------------------------------\n\n"
-        stringResult
-    }
-      
-    var filenames = List("text1.txt")
     
     // initialize factory
-    FunctionFactory.main(Array.empty)
+    FunctionFactory.setMode(args(0))
       
+    var filenames = FunctionFactory.getFilesList()
+    //var filenames = List("text1.txt")
     var map = FunctionFactory.getMap()
     var reduce = FunctionFactory.getReduce()
+    
+    var clientNumber = 0
+    var clientName = "client"
       
     var fileContents = ""
     for (file <- filenames){
       fileContents = Source.fromFile(file).getLines.mkString
     
-      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, map, reduce), "client")
+      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, map, reduce), clientName + clientNumber)
       
+      clientNumber += 1
    }
   }
 }

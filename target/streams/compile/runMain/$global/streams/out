@@ -1,61 +1,71 @@
 [0m[[0minfo[0m] [0mRunning MapReduce.MapReduceMaster [0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.471] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.725] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.739] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.845] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Registered cluster JMX MBean [akka:type=Cluster][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.845] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Started up successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.949] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.960] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:2552][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.969] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:16.981] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Started up successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.063] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.073] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:58085][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.076] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58085] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.080] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58085] - Started up successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.150] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.165] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:58090][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.169] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58090] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.174] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58090] - Started up successfully[0m
-[0m[[0minfo[0m] [0mtype: word count[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.337] [ClusterSystem-akka.actor.default-dispatcher-15] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:2551] is JOINING, roles [compute][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.354] [ClusterSystem-akka.actor.default-dispatcher-15] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:2551] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.381] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService] Singleton manager starting singleton actor [akka://ClusterSystem/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.383] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService] ClusterSingletonManager state change [Start -> Oldest][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.472] [ClusterSystem-akka.actor.default-dispatcher-2] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.525] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.598] [ClusterSystem-akka.actor.default-dispatcher-14] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58085] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:17.723] [ClusterSystem-akka.actor.default-dispatcher-14] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58090] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:18.373] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceServiceProxy] Singleton identified at [akka://ClusterSystem/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.346] [ClusterSystem-akka.actor.default-dispatcher-16] [akka://ClusterSystem/system/cluster/core/daemon/joinSeedNodeProcess-1] Message [akka.cluster.InternalClusterAction$InitJoinNack] from Actor[akka.tcp://ClusterSystem@127.0.0.1:2552/system/cluster/core/daemon#1186286319] to Actor[akka://ClusterSystem/system/cluster/core/daemon/joinSeedNodeProcess-1#1854233270] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.364] [ClusterSystem-akka.actor.default-dispatcher-2] [akka://ClusterSystem/system/cluster/core/daemon/joinSeedNodeProcess-1] Message [akka.cluster.InternalClusterAction$InitJoinNack] from Actor[akka.tcp://ClusterSystem@127.0.0.1:2552/system/cluster/core/daemon#1186286319] to Actor[akka://ClusterSystem/system/cluster/core/daemon/joinSeedNodeProcess-1#107327644] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.414] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:58085] is JOINING, roles [compute][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.415] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:2552] is JOINING, roles [compute][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.415] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:58090] is JOINING, roles [][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.824] [ClusterSystem-akka.actor.default-dispatcher-18] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.829] [ClusterSystem-akka.actor.default-dispatcher-16] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58085] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.839] [ClusterSystem-akka.actor.default-dispatcher-22] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:58090] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 17:34:22.845] [ClusterSystem-akka.remote.default-remote-dispatcher-4] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapJob] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.892] [ClusterSystem-akka.actor.default-dispatcher-16] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:2552] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.892] [ClusterSystem-akka.actor.default-dispatcher-16] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:58085] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.892] [ClusterSystem-akka.actor.default-dispatcher-16] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:58090] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.903] [ClusterSystem-akka.actor.default-dispatcher-22] [akka.tcp://ClusterSystem@127.0.0.1:58085/user/mapReduceServiceProxy] Singleton identified at [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.909] [ClusterSystem-akka.actor.default-dispatcher-18] [akka.tcp://ClusterSystem@127.0.0.1:2552/user/mapReduceServiceProxy] Singleton identified at [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.916] [ClusterSystem-akka.actor.default-dispatcher-21] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#1651313969] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.916] [ClusterSystem-akka.actor.default-dispatcher-21] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#1651313969] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:22.921] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.tcp://ClusterSystem@127.0.0.1:2552/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger][0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 17:34:22.966] [ClusterSystem-akka.remote.default-remote-dispatcher-6] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapReduceResult] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
-[0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m------Map Reduce Results------[0m
-[0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mFilename: text1.txt(text,3)[0m
-[0m[[0minfo[0m] [0m(some,1)[0m
-[0m[[0minfo[0m] [0m(file,1)[0m
-[0m[[0minfo[0m] [0m(with,1)[0m
-[0m[[0minfo[0m] [0m(this,1)[0m
-[0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m------------------------------[0m
-[0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:23.003] [ClusterSystem-akka.actor.default-dispatcher-21] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#1644315106] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 17:34:23.004] [ClusterSystem-akka.actor.default-dispatcher-14] [akka.tcp://ClusterSystem@127.0.0.1:58085/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger][0m
+[0m[[0minfo[0m] [0m[INFO] [05/31/2016 18:12:53.199] [main] [akka.remote.Remoting] Starting remoting[0m
+[0m[[0minfo[0m] [0m[ERROR] [05/31/2016 18:12:53.536] [ClusterSystem-akka.remote.default-remote-dispatcher-13] [NettyTransport(akka://ClusterSystem)] failed to bind to /127.0.0.1:2551, shutting down Netty transport[0m
+[0m[[31merror[0m] [0mException in thread "main" org.jboss.netty.channel.ChannelException: Failed to bind to: /127.0.0.1:2551[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.bootstrap.ServerBootstrap.bind(ServerBootstrap.java:272)[0m
+[0m[[31merror[0m] [0m	at akka.remote.transport.netty.NettyTransport$$anonfun$listen$1.apply(NettyTransport.scala:415)[0m
+[0m[[31merror[0m] [0m	at akka.remote.transport.netty.NettyTransport$$anonfun$listen$1.apply(NettyTransport.scala:411)[0m
+[0m[[31merror[0m] [0m	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237)[0m
+[0m[[31merror[0m] [0m	at scala.util.Try$.apply(Try.scala:192)[0m
+[0m[[31merror[0m] [0m	at scala.util.Success.map(Try.scala:237)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:237)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:39)[0m
+[0m[[31merror[0m] [0m	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:405)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979)[0m
+[0m[[31merror[0m] [0m	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107)[0m
+[0m[[31merror[0m] [0mCaused by: java.net.BindException: Address already in use[0m
+[0m[[31merror[0m] [0m	at sun.nio.ch.Net.bind0(Native Method)[0m
+[0m[[31merror[0m] [0m	at sun.nio.ch.Net.bind(Net.java:436)[0m
+[0m[[31merror[0m] [0m	at sun.nio.ch.Net.bind(Net.java:428)[0m
+[0m[[31merror[0m] [0m	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)[0m
+[0m[[31merror[0m] [0m	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.channel.socket.nio.NioServerBoss$RegisterTask.run(NioServerBoss.java:193)[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.processTaskQueue(AbstractNioSelector.java:391)[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:315)[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.channel.socket.nio.NioServerBoss.run(NioServerBoss.java:42)[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108)[0m
+[0m[[31merror[0m] [0m	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42)[0m
+[0m[[31merror[0m] [0m	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)[0m
+[0m[[31merror[0m] [0m	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)[0m
+[0m[[31merror[0m] [0m	at java.lang.Thread.run(Thread.java:745)[0m
+[0m[[0minfo[0m] [0m[INFO] [05/31/2016 18:12:53.597] [ClusterSystem-akka.remote.default-remote-dispatcher-5] [akka://ClusterSystem/system/remoting-terminator] Shutting down remote daemon.[0m
+[0m[[0minfo[0m] [0m[INFO] [05/31/2016 18:12:53.602] [ClusterSystem-akka.remote.default-remote-dispatcher-5] [akka://ClusterSystem/system/remoting-terminator] Remote daemon shut down; proceeding with flushing remote transports.[0m
+[0m[[0minfo[0m] [0m[ERROR] [05/31/2016 18:12:53.609] [ClusterSystem-akka.remote.default-remote-dispatcher-13] [akka.remote.Remoting] Remoting system has been terminated abrubtly. Attempting to shut down transports[0m
+[0m[[0minfo[0m] [0m[INFO] [05/31/2016 18:12:53.611] [ClusterSystem-akka.remote.default-remote-dispatcher-5] [akka://ClusterSystem/system/remoting-terminator] Remoting shut down.[0m
+java.lang.RuntimeException: Nonzero exit code returned from runner: 1
+	at scala.sys.package$.error(package.scala:27)
+	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:1830)
+	at sbt.BuildCommon$$anonfun$toError$1.apply(Defaults.scala:1830)
+	at scala.Option.foreach(Option.scala:236)
+	at sbt.BuildCommon$class.toError(Defaults.scala:1830)
+	at sbt.Defaults$.toError(Defaults.scala:35)
+	at sbt.Defaults$$anonfun$runMainTask$1$$anonfun$apply$34$$anonfun$apply$35.apply(Defaults.scala:685)
+	at sbt.Defaults$$anonfun$runMainTask$1$$anonfun$apply$34$$anonfun$apply$35.apply(Defaults.scala:683)
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47)
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:40)
+	at sbt.std.Transform$$anon$4.work(System.scala:63)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:226)
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:17)
+	at sbt.Execute.work(Execute.scala:235)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:226)
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:159)
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:28)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+[0m[[31merror[0m] [0m(compile:[31mrunMain[0m) Nonzero exit code returned from runner: 1[0m
