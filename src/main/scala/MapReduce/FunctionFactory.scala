@@ -68,9 +68,9 @@ object FunctionFactory {
         
 		while (searching){
             indexOf = content.indexOf(href, startIndex)
-			if (indexOf > 0) {
+			if (indexOf >= 0) {
 				result = MyTuple("href", 1)::result
-				startIndex = indexOf
+				startIndex = indexOf + 1
 			} else {
 				searching = false
 			}

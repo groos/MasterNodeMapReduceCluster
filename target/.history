@@ -2,3 +2,8 @@ runMain MapReduce.MapReduceMaster
 runMain MapReduce.MapReduceMaster 1
 runMain MapReduce.MapReduceMaster 2
 runMain MapReduce.MapReduceMaster
+runMain MapReduce.MapReduceMaster 2
+runMain MapReduce.MapReduceMaster 1
+runMain MapReduce.MapReduceMaster 2
+runMain MapReduce.MapReduceMaster 1
+runMain MapReduce.MapReduceMaster 2
