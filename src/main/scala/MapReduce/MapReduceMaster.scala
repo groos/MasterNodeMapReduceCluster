@@ -77,13 +77,17 @@ object MapReduceMasterClient {
     var clientName = "client"
       
     var fileContents = ""
-    for (file <- filenames){
-      fileContents = Source.fromFile(file).getLines.mkString
-    
-      system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, map, reduce), clientName + clientNumber)
-      
-      clientNumber += 1
-   }
+    if (filenames.length > 0){
+        for (file <- filenames){
+          fileContents = Source.fromFile(file).getLines.mkString
+            
+          FunctionFactory.addJob()
+
+          system.actorOf(Props(classOf[MapReduceClient], "/user/mapReduceServiceProxy", file, fileContents, map, reduce), clientName + clientNumber)
+
+          clientNumber += 1
+       }
+    }
   }
 }
 

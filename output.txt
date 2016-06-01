@@ -1,0 +1,421 @@
+Map Reduce Output:
+
+Command Line: runMain MapReduce.MapReduceMaster 0
+[info] 
+[info] 
+[info] ------Map Reduce Results: Word Count------
+[info] 
+[info] Filename: words3.txt
+[info] 
+[info] (talking,1)
+[info] (lights,1)
+[info] (n,1)
+[info] (but,1)
+[info] (regular,1)
+[info] (become,1)
+[info] (game,2)
+[info] (been,1)
+[info] (against,1)
+[info] (season,1)
+[info] (not,1)
+[info] (b,1)
+[info] (michael,1)
+[info] (vague,1)
+[info] (twenty,1)
+[info] (won,1)
+[info] (chicago,1)
+[info] (total,1)
+[info] (last,1)
+[info] (wins,1)
+[info] (possibility,1)
+[info] (every,1)
+[info] (oracle,2)
+[info] (they,3)
+[info] (general,1)
+[info] (fog,1)
+[info] (offering,1)
+[info] (only,1)
+[info] (decree,1)
+[info] (would,1)
+[info] (jordan’s,1)
+[info] (sixty,1)
+[info] (that,1)
+[info] (six,2)
+[info] (people,1)
+[info] (straight,1)
+[info] (its,1)
+[info] (for,1)
+[info] (record,1)
+[info] (felt,2)
+[info] (about,1)
+[info] (bluish,1)
+[info] (by,1)
+[info] (court,1)
+[info] (year,1)
+[info] (like,2)
+[info] (lost,1)
+[info] (since,1)
+[info] (ostensibly,1)
+[info] (because,1)
+[info] (while,1)
+[info] (was,2)
+[info] (backdrop,1)
+[info] (glows,1)
+[info] (fall,1)
+[info] (league,1)
+[info] (bulls,1)
+[info] (early,1)
+[info] (has,1)
+[info] (1996,1)
+[info] (times,1)
+[info] (had,4)
+[info] (warriors,1)
+[info] (team,1)
+[info] (fourth,1)
+[info] (celebration,2)
+[info] (ordinary,1)
+[info] (night,1)
+[info] (two,1)
+[info] (history,1)
+[info] (surpass,1)
+[info] (aura,1)
+[info] (this,3)
+[info] (seventy,1)
+[info] (best,2)
+[info] (evening,1)
+[info] 
+[info] ------------------------------
+[info] 
+[info] 
+[info] 
+[info] 
+[info] ------Map Reduce Results: Word Count------
+[info] 
+[info] Filename: words1.txt
+[info] 
+[info] (ad,1)
+[info] (establish,1)
+[info] (saying,1)
+[info] (segregationist,1)
+[info] (text,1)
+[info] (why,1)
+[info] (wrong,1)
+[info] (commissioner,1)
+[info] (prove,1)
+[info] (henceforth,1)
+[info] (malice”,1)
+[info] (facts,1)
+[info] (story—a,1)
+[info] (one,1)
+[info] (martin,1)
+[info] (against,1)
+[info] (rule,1)
+[info] (getting,1)
+[info] (not,1)
+[info] (king,1)
+[info] (have,1)
+[info] (you,1)
+[info] (able,1)
+[info] (defense,1)
+[info] (“actual,1)
+[info] (minor,1)
+[info] (especially,1)
+[info] (they,1)
+[info] (contributions,1)
+[info] (made,1)
+[info] (cause,1)
+[info] (mind,1)
+[info] (luther,1)
+[info] (state,1)
+[info] (life,1)
+[info] (insuperably,1)
+[info] (almost,1)
+[info] (would,1)
+[info] (that,3)
+[info] (authorities,1)
+[info] (for,2)
+[info] (alabama,1)
+[info] (just,1)
+[info] (plaintiffs,1)
+[info] (appeal,1)
+[info] (with,1)
+[info] (sullivan,2)
+[info] (about,2)
+[info] (legal,1)
+[info] (by,1)
+[info] (court,2)
+[info] (didn’t,1)
+[info] (future,1)
+[info] (public,2)
+[info] (advertisement,1)
+[info] (was,4)
+[info] (mistake—a,1)
+[info] (suit,1)
+[info] (make,1)
+[info] (tussles,1)
+[info] (couple,1)
+[info] (safety,1)
+[info] (times,1)
+[info] (his,1)
+[info] (were,1)
+[info] (case,1)
+[info] (libel,1)
+[info] (difficult,2)
+[info] (errors,1)
+[info] (news,1)
+[info] (figure,1)
+[info] (press,1)
+[info] (montgomery,1)
+[info] (which,1)
+[info] (there,1)
+[info] (south,1)
+[info] (1960,1)
+[info] (loser,1)
+[info] 
+[info] ------------------------------
+[info] 
+[info] 
+[info] 
+[info] 
+[info] ------Map Reduce Results: Word Count------
+[info] 
+[info] Filename: words2.txt
+[info] 
+[info] (vacuum,1)
+[info] (follow,1)
+[info] (meat,1)
+[info] (ignorant,1)
+[info] (chili,1)
+[info] (but,1)
+[info] (”,1)
+[info] (unexpectedly,1)
+[info] (yellow,1)
+[info] (steeped,1)
+[info] (could,1)
+[info] (grilled,1)
+[info] (distinct,1)
+[info] (palate,1)
+[info] (beet,1)
+[info] (barbecue,1)
+[info] (been,1)
+[info] (one,2)
+[info] (tubular,1)
+[info] (consumed,1)
+[info] (soufflé,1)
+[info] (batter,1)
+[info] (baseball,1)
+[info] (include,1)
+[info] (hanging,1)
+[info] (whisked,1)
+[info] (tentacular,1)
+[info] (marathon,1)
+[info] (smidge,1)
+[info] (asian,1)
+[info] (or,1)
+[info] (appetites,1)
+[info] (wholly,1)
+[info] (walking,1)
+[info] (generously,1)
+[info] (pancake,1)
+[info] (pear,1)
+[info] (tees,1)
+[info] (will,1)
+[info] (seafood,1)
+[info] (sweetened,1)
+[info] (wedges,1)
+[info] (alongside,1)
+[info] (honey,1)
+[info] (only,1)
+[info] (smoke,1)
+[info] (ringed,1)
+[info] (event—there,1)
+[info] (capped,1)
+[info] (gratis,1)
+[info] (that,1)
+[info] (side,1)
+[info] (amidst,1)
+[info] (beef—requires,1)
+[info] (options,1)
+[info] (bubble,1)
+[info] (corn,1)
+[info] (center,1)
+[info] (might,1)
+[info] (for,4)
+[info] (appendage,1)
+[info] (egg,1)
+[info] (potato,1)
+[info] (main,1)
+[info] (evokes,1)
+[info] (korean,1)
+[info] (half,2)
+[info] (appetizers,1)
+[info] (matching,1)
+[info] (pickled,1)
+[info] (with,2)
+[info] (formidable,1)
+[info] (by,1)
+[info] (paleo,1)
+[info] (space,1)
+[info] (refreshing,1)
+[info] (ripe,1)
+[info] (oil,1)
+[info] (moat,1)
+[info] (into,1)
+[info] (these,1)
+[info] (never,1)
+[info] (consisting,1)
+[info] (beat,1)
+[info] (becomes,1)
+[info] (untrained,1)
+[info] (overdose,1)
+[info] (has,1)
+[info] (creamy,1)
+[info] (mozzarella,1)
+[info] (tossed,1)
+[info] (drizzled,1)
+[info] (sesame,1)
+[info] (disadvantage,1)
+[info] (suspects,1)
+[info] (soy,1)
+[info] (lime,1)
+[info] (beef,1)
+[info] (too,1)
+[info] (dieters,1)
+[info] (silken,1)
+[info] (banchan,1)
+[info] (speed,1)
+[info] (juice,1)
+[info] (spongy,1)
+[info] (tofu,1)
+[info] (table,1)
+[info] (cleansing,1)
+[info] (example,1)
+[info] (two,1)
+[info] (pork,1)
+[info] (faint,1)
+[info] (bright,1)
+[info] (servers,1)
+[info] (machine,1)
+[info] (pairing,1)
+[info] (underneath,1)
+[info] (daikon,1)
+[info] (which,2)
+[info] (“gangnam,1)
+[info] (tartare,1)
+[info] (hearty,1)
+[info] (dishes,1)
+[info] (may,1)
+[info] (stomach,1)
+[info] (style,1)
+[info] (cubes,1)
+[info] (grill,1)
+[info] 
+[info] ------------------------------
+[info] 
+
+
+
+Command Line: runMain MapReduce.MapReduceMaster 1
+[info] 
+[info] 
+[info] ------Map Reduce Results: Reduce Index------
+[info] 
+[info] Filename: words1.txt
+[info] 
+[info] (Sullivan,2)
+[info] (Alabama,1)
+[info] (Court,2)
+[info] (Martin,1)
+[info] (Times,1)
+[info] (There,1)
+[info] (Luther,1)
+[info] (King,1)
+[info] (The,2)
+[info] (South,1)
+[info] (Montgomery,1)
+[info] 
+[info] ------------------------------
+[info] 
+[info] 
+[info] 
+[info] 
+[info] ------Map Reduce Results: Reduce Index------
+[info] 
+[info] Filename: words2.txt
+[info] 
+[info] (One,1)
+[info] (Paleo,1)
+[info] (These,1)
+[info] (Korean,1)
+[info] (The,1)
+[info] (Style,1)
+[info] (Asian,1)
+[info] (Underneath,1)
+[info] 
+[info] ------------------------------
+[info] 
+[info] 
+[info] 
+[info] 
+[info] ------Map Reduce Results: Reduce Index------
+[info] 
+[info] Filename: words3.txt
+[info] 
+[info] (Jordan’s,1)
+[info] (This,1)
+[info] (A,1)
+[info] (Warriors,1)
+[info] (It,1)
+[info] (Bulls,1)
+[info] (Oracle,2)
+[info] (Against,1)
+[info] (They,2)
+[info] (Michael,1)
+[info] (N,1)
+[info] (Chicago,1)
+[info] (B,1)
+[info] 
+[info] ------------------------------
+[info] 
+[info] 
+
+
+
+Command Line: runMain MapReduce.MapReduceMaster 2
+[info] 
+[info] 
+[info] ------Map Reduce Results: Hyperlink Count ------
+[info] 
+[info] Filename: web3.html
+[info] 
+[info] web3.html contains 37 hyperlinks.
+[info] ------------------------------
+[info] 
+[info] 
+[info] [INFO] [06/01/2016 15:12:50.643] [ClusterSystem-akka.actor.default-dispatcher-4] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#324162407] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+[info] [INFO] [06/01/2016 15:12:50.644] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.tcp://ClusterSystem@127.0.0.1:51078/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger]
+[info] 
+[info] 
+[info] ------Map Reduce Results: Hyperlink Count ------
+[info] 
+[info] Filename: web2.html
+[info] 
+[info] web2.html contains 27 hyperlinks.
+[info] ------------------------------
+[info] 
+[info] 
+[info] 
+[info] 
+[info] ------Map Reduce Results: Hyperlink Count ------
+[info] 
+[info] Filename: web1.html
+[info] 
+[info] web1.html contains 49 hyperlinks.
+[info] ------------------------------
+[info] 
+[info] 
+
+
+
+
+

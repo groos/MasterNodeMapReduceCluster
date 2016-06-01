@@ -13,6 +13,19 @@ object FunctionFactory {
     // Forgot how to properly initalize these types.
     var map = mapFunctionWc
     var reduce = reduceFunctionWc
+    var jobsLeft = 0
+    
+   def getJobsLeft(): Int = {
+       return jobsLeft
+   }
+    
+   def addJob() = {
+       jobsLeft += 1
+   }
+    
+   def removeJob() = {
+       jobsLeft = jobsLeft - 1
+   }
     
    def main(args: Array[String]): Unit = {
      setMode("0")

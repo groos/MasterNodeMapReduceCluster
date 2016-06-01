@@ -1,79 +1,356 @@
-[0m[[0minfo[0m] [0mRunning MapReduce.MapReduceMaster 2[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:55.522] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:55.759] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:55.772] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:55.878] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Registered cluster JMX MBean [akka:type=Cluster][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:55.878] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Started up successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:55.998] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.008] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:2552][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.010] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.014] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Started up successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.066] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.078] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:50589][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.079] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50589] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.083] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50589] - Started up successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.148] [main] [akka.remote.Remoting] Starting remoting[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.158] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:50590][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.160] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50590] - Starting up...[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.164] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50590] - Started up successfully[0m
-[0m[[0minfo[0m] [0mtype: hyperlink count[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.468] [ClusterSystem-akka.actor.default-dispatcher-2] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.468] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:2551] is JOINING, roles [compute][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.482] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:2551] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.508] [ClusterSystem-akka.actor.default-dispatcher-21] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService] Singleton manager starting singleton actor [akka://ClusterSystem/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.509] [ClusterSystem-akka.actor.default-dispatcher-21] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService] ClusterSingletonManager state change [Start -> Oldest][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.525] [ClusterSystem-akka.actor.default-dispatcher-21] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.597] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50589] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:56.676] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50590] - Metrics collection has started successfully[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:39:57.501] [ClusterSystem-akka.actor.default-dispatcher-22] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceServiceProxy] Singleton identified at [akka://ClusterSystem/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.570] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:50590] is JOINING, roles [][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.571] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:2552] is JOINING, roles [compute][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.571] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:50589] is JOINING, roles [compute][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.939] [ClusterSystem-akka.actor.default-dispatcher-13] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50590] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.940] [ClusterSystem-akka.actor.default-dispatcher-5] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.941] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:2552] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.941] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:50589] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.941] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:50590] to [Up][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:01.943] [ClusterSystem-akka.actor.default-dispatcher-16] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:50589] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 20:40:01.957] [ClusterSystem-akka.remote.default-remote-dispatcher-4] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapJob] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.044] [ClusterSystem-akka.actor.default-dispatcher-2] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#-59199537] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.044] [ClusterSystem-akka.actor.default-dispatcher-22] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#-1476873316] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.044] [ClusterSystem-akka.actor.default-dispatcher-2] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#-59199537] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.050] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.tcp://ClusterSystem@127.0.0.1:2552/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.050] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.tcp://ClusterSystem@127.0.0.1:50589/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.057] [ClusterSystem-akka.actor.default-dispatcher-20] [akka.tcp://ClusterSystem@127.0.0.1:2552/user/mapReduceServiceProxy] Singleton identified at [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[INFO] [05/31/2016 20:40:02.064] [ClusterSystem-akka.actor.default-dispatcher-3] [akka.tcp://ClusterSystem@127.0.0.1:50589/user/mapReduceServiceProxy] Singleton identified at [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService/singleton][0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 20:40:02.080] [ClusterSystem-akka.remote.default-remote-dispatcher-5] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapJob] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 20:40:02.087] [ClusterSystem-akka.remote.default-remote-dispatcher-6] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapReduceRawResult] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 20:40:02.089] [ClusterSystem-akka.remote.default-remote-dispatcher-6] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapReduceRawResult] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
-[0m[[0minfo[0m] [0m[WARN] [05/31/2016 20:40:02.111] [ClusterSystem-akka.remote.default-remote-dispatcher-5] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapReduceResult] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
+[0m[[0minfo[0m] [0mRunning MapReduce.MapReduceMaster 0[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.119] [main] [akka.remote.Remoting] Starting remoting[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.348] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:2551][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.362] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Starting up...[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.471] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Registered cluster JMX MBean [akka:type=Cluster][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.471] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Started up successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.597] [main] [akka.remote.Remoting] Starting remoting[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.607] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:2552][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.609] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Starting up...[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.615] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Started up successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.664] [main] [akka.remote.Remoting] Starting remoting[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.675] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:51105][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.677] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51105] - Starting up...[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.680] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51105] - Started up successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.743] [main] [akka.remote.Remoting] Starting remoting[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.753] [main] [akka.remote.Remoting] Remoting started; listening on addresses :[akka.tcp://ClusterSystem@127.0.0.1:51106][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.755] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51106] - Starting up...[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.784] [main] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51106] - Started up successfully[0m
+[0m[[0minfo[0m] [0mtype: word count[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:44.989] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:2551] is JOINING, roles [compute][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.004] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:2551] to [Up][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.037] [ClusterSystem-akka.actor.default-dispatcher-2] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService] Singleton manager starting singleton actor [akka://ClusterSystem/user/mapReduceService/singleton][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.040] [ClusterSystem-akka.actor.default-dispatcher-2] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService] ClusterSingletonManager state change [Start -> Oldest][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.213] [ClusterSystem-akka.actor.default-dispatcher-5] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Metrics collection has started successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.213] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51105] - Metrics collection has started successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.216] [ClusterSystem-akka.actor.default-dispatcher-14] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Metrics collection has started successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.228] [ClusterSystem-akka.actor.default-dispatcher-2] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:51106] is JOINING, roles [][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.318] [ClusterSystem-akka.actor.default-dispatcher-14] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51106] - Metrics collection has started successfully[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.518] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:51106] to [Up][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:45.747] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51106] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
+[0m[[0minfo[0m] [0m[WARN] [06/01/2016 15:15:45.764] [ClusterSystem-akka.remote.default-remote-dispatcher-4] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapJob] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:46.015] [ClusterSystem-akka.actor.default-dispatcher-14] [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceServiceProxy] Singleton identified at [akka://ClusterSystem/user/mapReduceService/singleton][0m
+[0m[[0minfo[0m] [0m[WARN] [06/01/2016 15:15:46.040] [ClusterSystem-akka.remote.default-remote-dispatcher-13] [akka.serialization.Serialization(akka://ClusterSystem)] Using the default Java serializer for class [MapReduce.MapReduceResult] which is not recommended because of performance implications. Use another serializer or disable this warning using the setting 'akka.actor.warn-about-java-serializer-usage'[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m------Map Reduce Results: Hyperlink Count ------[0m
+[0m[[0minfo[0m] [0m------Map Reduce Results: Word Count------[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mFilename: web1.html[0m
+[0m[[0minfo[0m] [0mFilename: words3.txt[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mweb1.html contains 49 hyperlinks.[0m
+[0m[[0minfo[0m] [0m(talking,1)[0m
+[0m[[0minfo[0m] [0m(lights,1)[0m
+[0m[[0minfo[0m] [0m(n,1)[0m
+[0m[[0minfo[0m] [0m(but,1)[0m
+[0m[[0minfo[0m] [0m(regular,1)[0m
+[0m[[0minfo[0m] [0m(become,1)[0m
+[0m[[0minfo[0m] [0m(game,2)[0m
+[0m[[0minfo[0m] [0m(been,1)[0m
+[0m[[0minfo[0m] [0m(against,1)[0m
+[0m[[0minfo[0m] [0m(season,1)[0m
+[0m[[0minfo[0m] [0m(not,1)[0m
+[0m[[0minfo[0m] [0m(b,1)[0m
+[0m[[0minfo[0m] [0m(michael,1)[0m
+[0m[[0minfo[0m] [0m(vague,1)[0m
+[0m[[0minfo[0m] [0m(twenty,1)[0m
+[0m[[0minfo[0m] [0m(won,1)[0m
+[0m[[0minfo[0m] [0m(chicago,1)[0m
+[0m[[0minfo[0m] [0m(total,1)[0m
+[0m[[0minfo[0m] [0m(last,1)[0m
+[0m[[0minfo[0m] [0m(wins,1)[0m
+[0m[[0minfo[0m] [0m(possibility,1)[0m
+[0m[[0minfo[0m] [0m(every,1)[0m
+[0m[[0minfo[0m] [0m(oracle,2)[0m
+[0m[[0minfo[0m] [0m(they,3)[0m
+[0m[[0minfo[0m] [0m(general,1)[0m
+[0m[[0minfo[0m] [0m(fog,1)[0m
+[0m[[0minfo[0m] [0m(offering,1)[0m
+[0m[[0minfo[0m] [0m(only,1)[0m
+[0m[[0minfo[0m] [0m(decree,1)[0m
+[0m[[0minfo[0m] [0m(would,1)[0m
+[0m[[0minfo[0m] [0m(jordan’s,1)[0m
+[0m[[0minfo[0m] [0m(sixty,1)[0m
+[0m[[0minfo[0m] [0m(that,1)[0m
+[0m[[0minfo[0m] [0m(six,2)[0m
+[0m[[0minfo[0m] [0m(people,1)[0m
+[0m[[0minfo[0m] [0m(straight,1)[0m
+[0m[[0minfo[0m] [0m(its,1)[0m
+[0m[[0minfo[0m] [0m(for,1)[0m
+[0m[[0minfo[0m] [0m(record,1)[0m
+[0m[[0minfo[0m] [0m(felt,2)[0m
+[0m[[0minfo[0m] [0m(about,1)[0m
+[0m[[0minfo[0m] [0m(bluish,1)[0m
+[0m[[0minfo[0m] [0m(by,1)[0m
+[0m[[0minfo[0m] [0m(court,1)[0m
+[0m[[0minfo[0m] [0m(year,1)[0m
+[0m[[0minfo[0m] [0m(like,2)[0m
+[0m[[0minfo[0m] [0m(lost,1)[0m
+[0m[[0minfo[0m] [0m(since,1)[0m
+[0m[[0minfo[0m] [0m(ostensibly,1)[0m
+[0m[[0minfo[0m] [0m(because,1)[0m
+[0m[[0minfo[0m] [0m(while,1)[0m
+[0m[[0minfo[0m] [0m(was,2)[0m
+[0m[[0minfo[0m] [0m(backdrop,1)[0m
+[0m[[0minfo[0m] [0m(glows,1)[0m
+[0m[[0minfo[0m] [0m(fall,1)[0m
+[0m[[0minfo[0m] [0m(league,1)[0m
+[0m[[0minfo[0m] [0m(bulls,1)[0m
+[0m[[0minfo[0m] [0m(early,1)[0m
+[0m[[0minfo[0m] [0m(has,1)[0m
+[0m[[0minfo[0m] [0m(1996,1)[0m
+[0m[[0minfo[0m] [0m(times,1)[0m
+[0m[[0minfo[0m] [0m(had,4)[0m
+[0m[[0minfo[0m] [0m(warriors,1)[0m
+[0m[[0minfo[0m] [0m(team,1)[0m
+[0m[[0minfo[0m] [0m(fourth,1)[0m
+[0m[[0minfo[0m] [0m(celebration,2)[0m
+[0m[[0minfo[0m] [0m(ordinary,1)[0m
+[0m[[0minfo[0m] [0m(night,1)[0m
+[0m[[0minfo[0m] [0m(two,1)[0m
+[0m[[0minfo[0m] [0m(history,1)[0m
+[0m[[0minfo[0m] [0m(surpass,1)[0m
+[0m[[0minfo[0m] [0m(aura,1)[0m
+[0m[[0minfo[0m] [0m(this,3)[0m
+[0m[[0minfo[0m] [0m(seventy,1)[0m
+[0m[[0minfo[0m] [0m(best,2)[0m
+[0m[[0minfo[0m] [0m(evening,1)[0m
+[0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m------------------------------[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m------Map Reduce Results: Hyperlink Count ------[0m
+[0m[[0minfo[0m] [0m------Map Reduce Results: Word Count------[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mFilename: web2.html[0m
+[0m[[0minfo[0m] [0mFilename: words1.txt[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mweb2.html contains 27 hyperlinks.[0m
+[0m[[0minfo[0m] [0m(ad,1)[0m
+[0m[[0minfo[0m] [0m(establish,1)[0m
+[0m[[0minfo[0m] [0m(saying,1)[0m
+[0m[[0minfo[0m] [0m(segregationist,1)[0m
+[0m[[0minfo[0m] [0m(text,1)[0m
+[0m[[0minfo[0m] [0m(why,1)[0m
+[0m[[0minfo[0m] [0m(wrong,1)[0m
+[0m[[0minfo[0m] [0m(commissioner,1)[0m
+[0m[[0minfo[0m] [0m(prove,1)[0m
+[0m[[0minfo[0m] [0m(henceforth,1)[0m
+[0m[[0minfo[0m] [0m(malice”,1)[0m
+[0m[[0minfo[0m] [0m(facts,1)[0m
+[0m[[0minfo[0m] [0m(story—a,1)[0m
+[0m[[0minfo[0m] [0m(one,1)[0m
+[0m[[0minfo[0m] [0m(martin,1)[0m
+[0m[[0minfo[0m] [0m(against,1)[0m
+[0m[[0minfo[0m] [0m(rule,1)[0m
+[0m[[0minfo[0m] [0m(getting,1)[0m
+[0m[[0minfo[0m] [0m(not,1)[0m
+[0m[[0minfo[0m] [0m(king,1)[0m
+[0m[[0minfo[0m] [0m(have,1)[0m
+[0m[[0minfo[0m] [0m(you,1)[0m
+[0m[[0minfo[0m] [0m(able,1)[0m
+[0m[[0minfo[0m] [0m(defense,1)[0m
+[0m[[0minfo[0m] [0m(“actual,1)[0m
+[0m[[0minfo[0m] [0m(minor,1)[0m
+[0m[[0minfo[0m] [0m(especially,1)[0m
+[0m[[0minfo[0m] [0m(they,1)[0m
+[0m[[0minfo[0m] [0m(contributions,1)[0m
+[0m[[0minfo[0m] [0m(made,1)[0m
+[0m[[0minfo[0m] [0m(cause,1)[0m
+[0m[[0minfo[0m] [0m(mind,1)[0m
+[0m[[0minfo[0m] [0m(luther,1)[0m
+[0m[[0minfo[0m] [0m(state,1)[0m
+[0m[[0minfo[0m] [0m(life,1)[0m
+[0m[[0minfo[0m] [0m(insuperably,1)[0m
+[0m[[0minfo[0m] [0m(almost,1)[0m
+[0m[[0minfo[0m] [0m(would,1)[0m
+[0m[[0minfo[0m] [0m(that,3)[0m
+[0m[[0minfo[0m] [0m(authorities,1)[0m
+[0m[[0minfo[0m] [0m(for,2)[0m
+[0m[[0minfo[0m] [0m(alabama,1)[0m
+[0m[[0minfo[0m] [0m(just,1)[0m
+[0m[[0minfo[0m] [0m(plaintiffs,1)[0m
+[0m[[0minfo[0m] [0m(appeal,1)[0m
+[0m[[0minfo[0m] [0m(with,1)[0m
+[0m[[0minfo[0m] [0m(sullivan,2)[0m
+[0m[[0minfo[0m] [0m(about,2)[0m
+[0m[[0minfo[0m] [0m(legal,1)[0m
+[0m[[0minfo[0m] [0m(by,1)[0m
+[0m[[0minfo[0m] [0m(court,2)[0m
+[0m[[0minfo[0m] [0m(didn’t,1)[0m
+[0m[[0minfo[0m] [0m(future,1)[0m
+[0m[[0minfo[0m] [0m(public,2)[0m
+[0m[[0minfo[0m] [0m(advertisement,1)[0m
+[0m[[0minfo[0m] [0m(was,4)[0m
+[0m[[0minfo[0m] [0m(mistake—a,1)[0m
+[0m[[0minfo[0m] [0m(suit,1)[0m
+[0m[[0minfo[0m] [0m(make,1)[0m
+[0m[[0minfo[0m] [0m(tussles,1)[0m
+[0m[[0minfo[0m] [0m(couple,1)[0m
+[0m[[0minfo[0m] [0m(safety,1)[0m
+[0m[[0minfo[0m] [0m(times,1)[0m
+[0m[[0minfo[0m] [0m(his,1)[0m
+[0m[[0minfo[0m] [0m(were,1)[0m
+[0m[[0minfo[0m] [0m(case,1)[0m
+[0m[[0minfo[0m] [0m(libel,1)[0m
+[0m[[0minfo[0m] [0m(difficult,2)[0m
+[0m[[0minfo[0m] [0m(errors,1)[0m
+[0m[[0minfo[0m] [0m(news,1)[0m
+[0m[[0minfo[0m] [0m(figure,1)[0m
+[0m[[0minfo[0m] [0m(press,1)[0m
+[0m[[0minfo[0m] [0m(montgomery,1)[0m
+[0m[[0minfo[0m] [0m(which,1)[0m
+[0m[[0minfo[0m] [0m(there,1)[0m
+[0m[[0minfo[0m] [0m(south,1)[0m
+[0m[[0minfo[0m] [0m(1960,1)[0m
+[0m[[0minfo[0m] [0m(loser,1)[0m
+[0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m------------------------------[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0m------Map Reduce Results: Hyperlink Count ------[0m
+[0m[[0minfo[0m] [0m------Map Reduce Results: Word Count------[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mFilename: web3.html[0m
+[0m[[0minfo[0m] [0mFilename: words2.txt[0m
 [0m[[0minfo[0m] [0m[0m
-[0m[[0minfo[0m] [0mweb3.html contains 37 hyperlinks.[0m
+[0m[[0minfo[0m] [0m(vacuum,1)[0m
+[0m[[0minfo[0m] [0m(follow,1)[0m
+[0m[[0minfo[0m] [0m(meat,1)[0m
+[0m[[0minfo[0m] [0m(ignorant,1)[0m
+[0m[[0minfo[0m] [0m(chili,1)[0m
+[0m[[0minfo[0m] [0m(but,1)[0m
+[0m[[0minfo[0m] [0m(”,1)[0m
+[0m[[0minfo[0m] [0m(unexpectedly,1)[0m
+[0m[[0minfo[0m] [0m(yellow,1)[0m
+[0m[[0minfo[0m] [0m(steeped,1)[0m
+[0m[[0minfo[0m] [0m(could,1)[0m
+[0m[[0minfo[0m] [0m(grilled,1)[0m
+[0m[[0minfo[0m] [0m(distinct,1)[0m
+[0m[[0minfo[0m] [0m(palate,1)[0m
+[0m[[0minfo[0m] [0m(beet,1)[0m
+[0m[[0minfo[0m] [0m(barbecue,1)[0m
+[0m[[0minfo[0m] [0m(been,1)[0m
+[0m[[0minfo[0m] [0m(one,2)[0m
+[0m[[0minfo[0m] [0m(tubular,1)[0m
+[0m[[0minfo[0m] [0m(consumed,1)[0m
+[0m[[0minfo[0m] [0m(soufflé,1)[0m
+[0m[[0minfo[0m] [0m(batter,1)[0m
+[0m[[0minfo[0m] [0m(baseball,1)[0m
+[0m[[0minfo[0m] [0m(include,1)[0m
+[0m[[0minfo[0m] [0m(hanging,1)[0m
+[0m[[0minfo[0m] [0m(whisked,1)[0m
+[0m[[0minfo[0m] [0m(tentacular,1)[0m
+[0m[[0minfo[0m] [0m(marathon,1)[0m
+[0m[[0minfo[0m] [0m(smidge,1)[0m
+[0m[[0minfo[0m] [0m(asian,1)[0m
+[0m[[0minfo[0m] [0m(or,1)[0m
+[0m[[0minfo[0m] [0m(appetites,1)[0m
+[0m[[0minfo[0m] [0m(wholly,1)[0m
+[0m[[0minfo[0m] [0m(walking,1)[0m
+[0m[[0minfo[0m] [0m(generously,1)[0m
+[0m[[0minfo[0m] [0m(pancake,1)[0m
+[0m[[0minfo[0m] [0m(pear,1)[0m
+[0m[[0minfo[0m] [0m(tees,1)[0m
+[0m[[0minfo[0m] [0m(will,1)[0m
+[0m[[0minfo[0m] [0m(seafood,1)[0m
+[0m[[0minfo[0m] [0m(sweetened,1)[0m
+[0m[[0minfo[0m] [0m(wedges,1)[0m
+[0m[[0minfo[0m] [0m(alongside,1)[0m
+[0m[[0minfo[0m] [0m(honey,1)[0m
+[0m[[0minfo[0m] [0m(only,1)[0m
+[0m[[0minfo[0m] [0m(smoke,1)[0m
+[0m[[0minfo[0m] [0m(ringed,1)[0m
+[0m[[0minfo[0m] [0m(event—there,1)[0m
+[0m[[0minfo[0m] [0m(capped,1)[0m
+[0m[[0minfo[0m] [0m(gratis,1)[0m
+[0m[[0minfo[0m] [0m(that,1)[0m
+[0m[[0minfo[0m] [0m(side,1)[0m
+[0m[[0minfo[0m] [0m(amidst,1)[0m
+[0m[[0minfo[0m] [0m(beef—requires,1)[0m
+[0m[[0minfo[0m] [0m(options,1)[0m
+[0m[[0minfo[0m] [0m(bubble,1)[0m
+[0m[[0minfo[0m] [0m(corn,1)[0m
+[0m[[0minfo[0m] [0m(center,1)[0m
+[0m[[0minfo[0m] [0m(might,1)[0m
+[0m[[0minfo[0m] [0m(for,4)[0m
+[0m[[0minfo[0m] [0m(appendage,1)[0m
+[0m[[0minfo[0m] [0m(egg,1)[0m
+[0m[[0minfo[0m] [0m(potato,1)[0m
+[0m[[0minfo[0m] [0m(main,1)[0m
+[0m[[0minfo[0m] [0m(evokes,1)[0m
+[0m[[0minfo[0m] [0m(korean,1)[0m
+[0m[[0minfo[0m] [0m(half,2)[0m
+[0m[[0minfo[0m] [0m(appetizers,1)[0m
+[0m[[0minfo[0m] [0m(matching,1)[0m
+[0m[[0minfo[0m] [0m(pickled,1)[0m
+[0m[[0minfo[0m] [0m(with,2)[0m
+[0m[[0minfo[0m] [0m(formidable,1)[0m
+[0m[[0minfo[0m] [0m(by,1)[0m
+[0m[[0minfo[0m] [0m(paleo,1)[0m
+[0m[[0minfo[0m] [0m(space,1)[0m
+[0m[[0minfo[0m] [0m(refreshing,1)[0m
+[0m[[0minfo[0m] [0m(ripe,1)[0m
+[0m[[0minfo[0m] [0m(oil,1)[0m
+[0m[[0minfo[0m] [0m(moat,1)[0m
+[0m[[0minfo[0m] [0m(into,1)[0m
+[0m[[0minfo[0m] [0m(these,1)[0m
+[0m[[0minfo[0m] [0m(never,1)[0m
+[0m[[0minfo[0m] [0m(consisting,1)[0m
+[0m[[0minfo[0m] [0m(beat,1)[0m
+[0m[[0minfo[0m] [0m(becomes,1)[0m
+[0m[[0minfo[0m] [0m(untrained,1)[0m
+[0m[[0minfo[0m] [0m(overdose,1)[0m
+[0m[[0minfo[0m] [0m(has,1)[0m
+[0m[[0minfo[0m] [0m(creamy,1)[0m
+[0m[[0minfo[0m] [0m(mozzarella,1)[0m
+[0m[[0minfo[0m] [0m(tossed,1)[0m
+[0m[[0minfo[0m] [0m(drizzled,1)[0m
+[0m[[0minfo[0m] [0m(sesame,1)[0m
+[0m[[0minfo[0m] [0m(disadvantage,1)[0m
+[0m[[0minfo[0m] [0m(suspects,1)[0m
+[0m[[0minfo[0m] [0m(soy,1)[0m
+[0m[[0minfo[0m] [0m(lime,1)[0m
+[0m[[0minfo[0m] [0m(beef,1)[0m
+[0m[[0minfo[0m] [0m(too,1)[0m
+[0m[[0minfo[0m] [0m(dieters,1)[0m
+[0m[[0minfo[0m] [0m(silken,1)[0m
+[0m[[0minfo[0m] [0m(banchan,1)[0m
+[0m[[0minfo[0m] [0m(speed,1)[0m
+[0m[[0minfo[0m] [0m(juice,1)[0m
+[0m[[0minfo[0m] [0m(spongy,1)[0m
+[0m[[0minfo[0m] [0m(tofu,1)[0m
+[0m[[0minfo[0m] [0m(table,1)[0m
+[0m[[0minfo[0m] [0m(cleansing,1)[0m
+[0m[[0minfo[0m] [0m(example,1)[0m
+[0m[[0minfo[0m] [0m(two,1)[0m
+[0m[[0minfo[0m] [0m(pork,1)[0m
+[0m[[0minfo[0m] [0m(faint,1)[0m
+[0m[[0minfo[0m] [0m(bright,1)[0m
+[0m[[0minfo[0m] [0m(servers,1)[0m
+[0m[[0minfo[0m] [0m(machine,1)[0m
+[0m[[0minfo[0m] [0m(pairing,1)[0m
+[0m[[0minfo[0m] [0m(underneath,1)[0m
+[0m[[0minfo[0m] [0m(daikon,1)[0m
+[0m[[0minfo[0m] [0m(which,2)[0m
+[0m[[0minfo[0m] [0m(“gangnam,1)[0m
+[0m[[0minfo[0m] [0m(tartare,1)[0m
+[0m[[0minfo[0m] [0m(hearty,1)[0m
+[0m[[0minfo[0m] [0m(dishes,1)[0m
+[0m[[0minfo[0m] [0m(may,1)[0m
+[0m[[0minfo[0m] [0m(stomach,1)[0m
+[0m[[0minfo[0m] [0m(style,1)[0m
+[0m[[0minfo[0m] [0m(cubes,1)[0m
+[0m[[0minfo[0m] [0m(grill,1)[0m
+[0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m------------------------------[0m
 [0m[[0minfo[0m] [0m[0m
 [0m[[0minfo[0m] [0m[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:49.998] [ClusterSystem-akka.actor.default-dispatcher-22] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:51105] is JOINING, roles [compute][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:50.001] [ClusterSystem-akka.actor.default-dispatcher-16] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:51105] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:50.020] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Node [akka.tcp://ClusterSystem@127.0.0.1:2552] is JOINING, roles [compute][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:50.024] [ClusterSystem-akka.actor.default-dispatcher-22] [akka.tcp://ClusterSystem@127.0.0.1:51105/user/mapReduceServiceProxy] Singleton identified at [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService/singleton][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:50.025] [ClusterSystem-akka.actor.default-dispatcher-19] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2552] - Welcome from [akka.tcp://ClusterSystem@127.0.0.1:2551][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:50.036] [ClusterSystem-akka.actor.default-dispatcher-17] [akka.tcp://ClusterSystem@127.0.0.1:2552/user/mapReduceServiceProxy] Singleton identified at [akka.tcp://ClusterSystem@127.0.0.1:2551/user/mapReduceService/singleton][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:51.516] [ClusterSystem-akka.actor.default-dispatcher-18] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:2552] to [Up][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:51.516] [ClusterSystem-akka.actor.default-dispatcher-18] [akka.cluster.Cluster(akka://ClusterSystem)] Cluster Node [akka.tcp://ClusterSystem@127.0.0.1:2551] - Leader is moving node [akka.tcp://ClusterSystem@127.0.0.1:51105] to [Up][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:51.570] [ClusterSystem-akka.actor.default-dispatcher-5] [akka.tcp://ClusterSystem@127.0.0.1:51105/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger][0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:51.646] [ClusterSystem-akka.actor.default-dispatcher-3] [akka://ClusterSystem/system/cluster/$a] Message [akka.cluster.ClusterEvent$MemberUp] from Actor[akka://ClusterSystem/deadLetters] to Actor[akka://ClusterSystem/system/cluster/$a#252110861] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.[0m
+[0m[[0minfo[0m] [0m[INFO] [06/01/2016 15:15:51.646] [ClusterSystem-akka.actor.default-dispatcher-4] [akka.tcp://ClusterSystem@127.0.0.1:2552/user/mapReduceService] ClusterSingletonManager state change [Start -> Younger][0m
