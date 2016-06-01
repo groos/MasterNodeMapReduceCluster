@@ -2,11 +2,6 @@ CSC 536
 Generic Map Reduce Akka Cluster
 Nick Groos
  
-Acknowledgements:
-This project is based around the architecture and configuration presented in the Lightbend Tutorial: Akka Cluster Samples with Java.
-In particular, the project configuration and receive function in MapReducer.scala are directly based on this tutorial.
- 
- 
 README:
 This Map Reduce framework is genericized to accept any map and reduce functions with the signatures:
  
@@ -28,3 +23,7 @@ map-reduce-enum: an integer 0, 1, or 2:
 0 = word count
 1 = reverse index
 2 = url count
+
+Acknowledgements:
+This project is based around the architecture and configuration presented in the Lightbend Tutorial: Akka Cluster Samples with Java.
+In particular, the project configuration and receive function in MapReducer.scala are directly based on this tutorial.
