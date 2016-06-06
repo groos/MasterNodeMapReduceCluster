@@ -24,6 +24,8 @@ map-reduce-enum: an integer 0, 1, or 2:
 1 = reverse index
 2 = url count
 
+Program Output: output.txt
+
 Acknowledgements:
 This project is based around the architecture and configuration presented in the Lightbend Tutorial: Akka Cluster Samples with Java.
 In particular, the project configuration and receive function in MapReducer.scala are directly based on this tutorial.

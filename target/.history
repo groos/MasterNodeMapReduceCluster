@@ -16,3 +16,4 @@ runMain MapReduce.MapReduceMaster 1
 runMain MapReduce.MapReduceMaster 2
 runMain MapReduce.MapReduceMaster 1
 runMain MapReduce.MapReduceMaster 0
+runMain MapReduce.MapReduceMaster

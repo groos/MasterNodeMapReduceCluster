@@ -14,9 +14,8 @@ import scala.collection.mutable.HashMap
 object MapReduceMaster {
   def main(args: Array[String]): Unit = {
     if (args.isEmpty) {
-      startup(Seq("2551", "2552", "0"))
-      var a = Array("0")
-      MapReduceMasterClient.main(a)
+        // add another node to a running cluster
+        startup(Seq("0", "0"))
     } else {
       startup(Seq("2551", "2552", "0"))
       MapReduceMasterClient.main(args)
